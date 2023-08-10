@@ -1,0 +1,119 @@
+
+$first-color : #00204a;
+$second-color :  #005792;
+$third-color :#00bbf0;
+$fourth-color :#fdb44b;
+
+.main{
+  width: 100%;
+  background: transparent;
+  margin-bottom: 2rem;
+  height: auto;
+  .main-search{
+    width: 130rem;
+    height:10rem;
+    margin: 0 auto;
+    .search-wrapping{
+      width: 130rem;
+      height: 100%;
+      margin: 0 auto;
+      h1{
+          text-align: center;
+          font-size: 3rem;
+          letter-spacing: .5rem;
+          color: $second-color;
+          padding-bottom: 1rem;
+          font-weight: 600;
+      }
+      input{
+          width: 70%;
+          margin: 0 auto;
+          height: 5rem;
+          font-size: 2rem;
+          padding-left: 2rem;
+          color: $first-color;
+          border-radius: 1rem;
+          font-weight: 500;
+          font-family: sans-serif;
+          letter-spacing: .1rem;
+      }
+  }
+  }
+  .main-users{
+      width: 130rem;
+      height:auto;
+      margin: 0 auto;
+      margin-top: 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:left;
+      gap: 3rem;
+  
+      .user-card {
+          background-color: transparent;
+          width: 300px;
+          height: 300px;
+          perspective: 1000px;
+          margin-top: 3rem;
+          border-radius: 1.5rem;
+        }
+        
+        .user-card-inner {
+          position: relative;
+          width: 100%;
+          height: 100%;
+          transition: transform 0.6s;
+          transform-style: preserve-3d;
+          box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+          border-radius: 1.5rem;
+        }
+        .user-card:hover .user-card-inner {
+          transform: rotateY(180deg);
+        }
+        
+        .user-card-front, .user-card-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+        
+        .user-card-front {
+          color:$first-color;
+          background: $fourth-color;
+          border-radius: 1.5rem;
+          font-weight: 600;
+          cursor: pointer;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          color: $first-color;
+          h3{
+              font-family: sans-serif;
+              font-weight: 400;
+          }
+        }
+        
+        .user-card-back {
+          background-color:$second-color;
+          color: white;
+          transform: rotateY(180deg);
+          border-radius: 1.5rem;
+          display: flex;
+          flex-direction: column;
+          align-items: left;
+          padding: 2rem 3rem;
+          // gap: 1rem;
+          justify-content: space-around;
+          h3{
+              color: white;
+              line-height: 2.5rem;
+              b{
+                  color: $fourth-color;
+              }
+          }
+        }
+  }
+}
